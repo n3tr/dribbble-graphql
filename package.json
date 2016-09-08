@@ -1,0 +1,29 @@
+{
+  "name": "dribbble-graphql",
+  "version": "1.0.0",
+  "description": "GraphQL for Dribbble API",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --exec babel-node -- app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "dribbble",
+    "graphql"
+  ],
+  "author": "Jirat Ki. (n3tr)",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.14.0",
+    "express-graphql": "^0.5.4",
+    "graphql": "^0.7.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.14.0",
+    "babel-preset-es2015": "^6.14.0",
+    "babel-preset-stage-0": "^6.5.0",
+    "eslint": "^3.4.0",
+    "eslint-config-airbnb-base": "^7.0.0",
+    "eslint-plugin-import": "^1.14.0"
+  }
+}
