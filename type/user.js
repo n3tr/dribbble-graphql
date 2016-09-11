@@ -5,6 +5,7 @@ import {
   GraphQLInt,
   GraphQLBoolean
 } from 'graphql'
+import UserLinks from './userlinks'
 
 const UserType = new GraphQLObjectType({
   name: 'User',
@@ -97,6 +98,9 @@ const UserType = new GraphQLObjectType({
     updatedAt: {
       type: GraphQLString,
       resolve: (user) => user.updated_at
+    },
+    links: {
+      type: UserLinks
     }
   }
 })
