@@ -9,6 +9,10 @@ import {
 // GraphQL ObjectType
 import Shot from './type/shot'
 
+
+// API
+import fetchShots from './api/fetchShot'
+
 // Static Data
 import shotsData from './data/shots.json'
 
@@ -22,7 +26,7 @@ const schema = new GraphQLSchema({
     fields: {
       shots: {
         type: new GraphQLList(Shot),
-        resolve: () => shotsData
+        resolve: () => fetchShots()
       }
     }
   })
