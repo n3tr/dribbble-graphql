@@ -3,7 +3,9 @@ import graphqlHTTP from 'express-graphql'
 import {
   GraphQLSchema,
   GraphQLObjectType,
-  GraphQLList } from 'graphql'
+  GraphQLInt,
+  GraphQLList
+} from 'graphql'
 
 
 // GraphQL ObjectType
@@ -14,7 +16,7 @@ import Shot from './type/shot'
 import fetchShots from './api/fetchShot'
 
 // Static Data
-import shotsData from './data/shots.json'
+// import shotsData from './data/shots.json'
 
 // Define the schema with one top-level field, `user`, that
 // takes an `id` argument and returns the User with that ID.
@@ -26,7 +28,17 @@ const schema = new GraphQLSchema({
     fields: {
       shots: {
         type: new GraphQLList(Shot),
-        resolve: () => fetchShots()
+        args: {
+          page: {
+            type: GraphQLInt,
+            defaultValue: 1
+          },
+          size: {
+            type: GraphQLInt,
+            defaultValue: 12
+          }
+        },
+        resolve: (_, args) => fetchShots(args.page, args.size)
       }
     }
   })
