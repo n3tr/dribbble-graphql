@@ -2,6 +2,8 @@
 
 Demonstrate use of GraphQL as a Application Server to fetch data from Dribbble API
 
+![](https://media.giphy.com/media/26ufaqeOAojSZFchG/giphy.gif)
+
 ## Install
 
 ```sh
