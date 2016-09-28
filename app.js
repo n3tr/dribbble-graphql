@@ -13,10 +13,8 @@ import Shot from './type/shot'
 
 
 // API
-import fetchShots from './api/fetchShot'
+import { fetchShots } from './api'
 
-// Static Data
-// import shotsData from './data/shots.json'
 
 // Define the schema with one top-level field, `user`, that
 // takes an `id` argument and returns the User with that ID.

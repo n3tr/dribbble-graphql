@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon --exec babel-node -- app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint type/**",
+    "lint-fix": "eslint --fix type/**"
   },
   "keywords": [
     "dribbble",
@@ -25,6 +27,7 @@
     "babel-preset-stage-0": "^6.5.0",
     "eslint": "^3.4.0",
     "eslint-config-airbnb-base": "^7.0.0",
-    "eslint-plugin-import": "^1.14.0"
+    "eslint-plugin-import": "^1.14.0",
+    "nodemon": "^1.10.2"
   }
 }

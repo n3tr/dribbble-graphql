@@ -19,63 +19,63 @@ const ShotType = new GraphQLObjectType({
     height: { type: GraphQLInt },
     viewsCount: {
       type: GraphQLInt,
-      resolve: (shot) => shot.views_count
+      resolve: shot => shot.views_count
     },
     likesCount: {
       type: GraphQLInt,
-      resolve: (shot) => shot.likesCount
+      resolve: shot => shot.likes_count
     },
     commentsCount: {
       type: GraphQLInt,
-      resolve: (shot) => shot.comments_count
+      resolve: shot => shot.comments_count
     },
     attachmentsCount: {
       type: GraphQLInt,
-      resolve: (shot) => shot.attachments_count
+      resolve: shot => shot.attachments_count
     },
     reboundsCount: {
       type: GraphQLInt,
-      resolve: (shot) => shot.rebounds_count
+      resolve: shot => shot.rebounds_count
     },
     bucketsCount: {
       type: GraphQLInt,
-      resolve: (shot) => shot.buckets_count
+      resolve: shot => shot.buckets_count
     },
     createdAt: {
       type: GraphQLString,
-      resolve: (shot) => shot.created_at
+      resolve: shot => shot.created_at
     },
     updatedAt: {
       type: GraphQLString,
-      resolve: (shot) => shot.updated_at
+      resolve: shot => shot.updated_at
     },
     htmlURL: {
       type: GraphQLString,
-      resolve: (shot) => shot.html_url
+      resolve: shot => shot.html_url
     },
     attachmentsURL: {
       type: GraphQLString,
-      resolve: (shot) => shot.attachments_url
+      resolve: shot => shot.attachments_url
     },
     bucketsURL: {
       type: GraphQLString,
-      resolve: (shot) => shot.buckets_url
+      resolve: shot => shot.buckets_url
     },
     commentsURL: {
       type: GraphQLString,
-      resolve: (shot) => shot.comments_url
+      resolve: shot => shot.comments_url
     },
     likesURL: {
       type: GraphQLString,
-      resolve: (shot) => shot.likes_url
+      resolve: shot => shot.likes_url
     },
     projectsURL: {
       type: GraphQLString,
-      resolve: (shot) => shot.projects_url
+      resolve: shot => shot.projects_url
     },
     reboundsURL: {
       type: GraphQLString,
-      resolve: (shot) => shot.rebounds_url
+      resolve: shot => shot.rebounds_url
     },
     animated: { type: GraphQLBoolean },
     tags: { type: new GraphQLList(GraphQLString) },
