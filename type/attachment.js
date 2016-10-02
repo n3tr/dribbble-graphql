@@ -2,9 +2,7 @@ import {
   GraphQLObjectType,
   GraphQLString,
   GraphQLID,
-  GraphQLInt,
-  GraphQLBoolean,
-  GraphQLList
+  GraphQLInt
 } from 'graphql'
 
 const Attachment = new GraphQLObjectType({
@@ -12,7 +10,7 @@ const Attachment = new GraphQLObjectType({
   fields: {
     id: { type: GraphQLID },
     url: { type: GraphQLString },
-    thumbnailUrl: { 
+    thumbnailUrl: {
       type: GraphQLString,
       resolve: attachment => attachment.thumbnail_url
     },
@@ -32,4 +30,4 @@ const Attachment = new GraphQLObjectType({
   }
 })
 
-export default ShotType
+export default Attachment

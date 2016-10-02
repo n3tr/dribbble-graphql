@@ -82,8 +82,7 @@ const ShotType = new GraphQLObjectType({
     tags: { type: new GraphQLList(GraphQLString) },
     user: { type: User },
     team: { type: User },
-    images: { type: Images },
-    attachments: { type: Attachment }
+    images: { type: Images }
   }
 })
 
