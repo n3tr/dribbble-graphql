@@ -8,6 +8,8 @@ import {
 } from 'graphql'
 import User from './user'
 import Images from './images'
+import Comment from './comment.js'
+import { fetchCommentsForShot } from '../api'
 
 const ShotType = new GraphQLObjectType({
   name: 'Shot',
@@ -79,6 +81,10 @@ const ShotType = new GraphQLObjectType({
     },
     animated: { type: GraphQLBoolean },
     tags: { type: new GraphQLList(GraphQLString) },
+    comments: {
+      type: new GraphQLList(Comment),
+      resolve: shot => fetchCommentsForShot(shot.id)
+    },
     user: { type: User },
     team: { type: User },
     images: { type: Images }

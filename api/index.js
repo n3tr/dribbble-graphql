@@ -11,3 +11,12 @@ export function fetchShots(page = 1, size = 12) {
     }
   }).then(res => res.json())
 }
+
+export function fetchCommentsForShot(shotId) {
+  const reqURL = `${BASE_URL}/shots/${shotId}/comments`
+  return fetch(reqURL, {
+    headers: {
+      Authorization: `Bearer ${ACCESS_TOKEN}`
+    }
+  }).then(res => res.json())
+}
