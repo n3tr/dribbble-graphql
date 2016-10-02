@@ -2,9 +2,7 @@ import {
   GraphQLObjectType,
   GraphQLString,
   GraphQLID,
-  GraphQLInt,
-  GraphQLBoolean,
-  GraphQLList
+  GraphQLInt
 } from 'graphql'
 import User from './user'
 
