@@ -8,6 +8,7 @@ import {
 } from 'graphql'
 import User from './user'
 import Images from './images'
+import Attachment from './attachment'
 
 const ShotType = new GraphQLObjectType({
   name: 'Shot',
@@ -81,7 +82,8 @@ const ShotType = new GraphQLObjectType({
     tags: { type: new GraphQLList(GraphQLString) },
     user: { type: User },
     team: { type: User },
-    images: { type: Images }
+    images: { type: Images },
+    attachments: { type: Attachment }
   }
 })
 
